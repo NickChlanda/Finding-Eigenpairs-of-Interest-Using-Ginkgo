@@ -1,7 +1,7 @@
 
 # Finding Eigenpairs of Interest Using Ginkgo
 
-GPU code for finding eigenpairs of large sparse matrices near randomly chosen energies, without full diagonalization. The code solves for the eigenpairs and reports their accuracy; computing expectation values or other quantities from the eigenvectors is left to the user. This repository accompanies the paper:
+GPU code for finding eigenpairs of large sparse matrices near randomly chosen energies, without full diagonalization, using Ginkgo. The code solves for the eigenpairs and reports their accuracy; computing expectation values or other quantities from the eigenvectors is left to the user. This repository accompanies the paper:
 
 > N. A. Chlanda, J. Keim, I. Martinez-Robles, S. E. Spielman, T. J. Carroll, and M. W. Noel, *A random sampling method to test the weak Eigenstate Thermalization Hypothesis* (2026). [[arXiv link / DOI](https://arxiv.org/abs/2610.30070)]
 
