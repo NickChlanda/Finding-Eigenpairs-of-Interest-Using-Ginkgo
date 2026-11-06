@@ -24,7 +24,7 @@ LFLAGS = -fPIC -fopenmp # -Wl
 LIBS = -L/usr/lib64 -L/usr/local/lib -L/usr/local/cuda/lib64 -L/opt/intel/oneapi/mkl/latest/lib/intel64 -L/opt/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin -lnetcdf -lmkl_intel_thread -lginkgo -lginkgo_omp -lginkgo_cuda -lginkgo_reference -lginkgo_dpcpp -lginkgo_device -lcuda -liomp5 -lginkgo_hip -lmkl_core -lmkl_gf_ilp64
 
 # define the C source files
-SRCS = wETH-stat-GitHub.cpp
+SRCS = FindingEigenpairsOfInterest.cpp
 
 # define headers
 HEAD = 
