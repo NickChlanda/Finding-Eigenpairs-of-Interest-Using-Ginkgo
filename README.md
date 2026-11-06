@@ -18,12 +18,12 @@ Given a sparse real symmetric matrix $H$, the code:
 
 1. Estimates the spectral bounds of $H$ with a short Lanczos run and rescales $H$ onto $[-1, 1]$.
 2. Estimates the density of states $\rho(E)$ with the kernel polynomial method (KPM).
-3. Draws energies at random from a central fraction of the spectrum, weighted by $\rho(E)$.
+3. Draws energies at random from a central fraction of the spectrum, using by $\rho(E)$.
 4. Opens a window around each energy expected to contain a set number of eigenvalues.
-5. Finds the eigenpairs in that window with Chebyshev filter diagonalization (CFD): Chebyshev window filter → SVQB orthonormalization → Rayleigh–Ritz.
+5. Finds the eigenpairs in that window with the main loop: Chebyshev window filter → SVQB orthonormalization → Rayleigh–Ritz.
 6. Keeps the in-window Ritz pairs with relative residual below $10^{-3}$ and repeats until the requested number of eigenpairs has been collected.
 
-The KPM and CFD routines can also be used on their own. See the paper for details.
+The KPM and CFD routines can also be used on their own.
 
 ## Repository Structure
 
@@ -62,17 +62,17 @@ make
 | `gpu_id`      | GPU device to run on                                               |
 | `NP`          | Chebyshev polynomial filter degree                                 |
 | `NT`          | Target number of eigenvalues per window                            |
-| `max_outer`   | Maximum CFD iterations per window                                  |
+| `max_outer`   | Maximum CFD iterations for reach window                            |
 | `target_frac` | Fraction of the spectrum to sample from (e.g. `0.05` = middle 5%)  |
 | `mc_target`   | Total number of eigenpairs to collect                              |
-| `ns_max`      | Maximum number of search vectors (the code uses `min(2*NT, ns_max)`) |
+| `ns_max`      | Maximum number of search vectors (the code uses `min(2*NT, ns_max)`)|
 
 Example:
 ```bash
-./FindingEigenpairsOfInterest H_N13.mtx 0 3500 1500 8 0.05 2000 3000
+./FindingEigenpairsOfInterest H_N13.mtx 0 3500 150 8 0.05 2000 300
 ```
 
-The parameters used in the paper are listed in Table I. To sample on several GPUs, run one instance per GPU with a different `gpu_id`; each instance writes its own output file.
+The parameters used in the paper are listed in Table I. For similar sized Hamiltonians to ours, I'd start with our parameters and change as needed.
 
 ## Output
 
