@@ -53,7 +53,7 @@ make
 
 ### Run
 ```bash
-./FindingEigenpairsOfInterest <matrix.mtx> <gpu_id> <NP> <NT> <max_outer> <target_frac> <mc_target> <ns_max>
+./findeigpairs <matrix.mtx> <gpu_id> <NP> <NT> <max_outer> <target_frac> <mc_target> <ns_max>
 ```
 
 | Argument      | Description                                                        |
@@ -67,9 +67,9 @@ make
 | `mc_target`   | Total number of eigenpairs to collect                              |
 | `ns_max`      | Maximum number of search vectors (the code uses `min(2*NT, ns_max)`)|
 
-Example:
+Example using Hamiltonian given to test:
 ```bash
-./FindingEigenpairsOfInterest H_N13.mtx 0 3500 150 8 0.05 2000 300
+./findeigpairs Hamiltonian_9atom_3body.txt 0 400 200 8 0.05 100 400
 ```
 
 The parameters used in the paper are listed in Table I. For similar sized Hamiltonians to ours, I'd start with our parameters and change as needed.
