@@ -306,10 +306,15 @@ if (random_num >= interpolated_rho)
       int n_accept = std::max ((int) (p * NT), 20);
 
     //printing some info 
+    std::cout << "--------------------------------------------" << std::endl;
     std::cout << "Window: [" << lower_use << ", " << upper_use << "]"<< std::endl;
-    std::cout << "window is set to contain this many eigenvalues =" << NT << std::endl;
-    std::cout <<  "creating this many search vectors =" << NS << std::endl;
-    std::cout <<"polynomial degree =" << NP << std::endl;
+      std::cout << "--------------------------------------------" << std::endl;
+    std::cout << "window is set to contain this many eigenvalues = " << NT << std::endl;
+      std::cout << "--------------------------------------------" << std::endl;
+    std::cout <<  "creating this many search vectors = " << NS << std::endl;
+      std::cout << "--------------------------------------------" << std::endl;
+    std::cout <<"polynomial degree = " << NP << std::endl;
+      std::cout << "--------------------------------------------" << std::endl;
 
       min_lower_use = std::min (min_lower_use, lower_use);
       max_upper_use = std::max (max_upper_use, upper_use);
