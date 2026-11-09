@@ -29,8 +29,10 @@ The KPM and CFD routines can also be used on their own.
 
 ```
 ├── FindingEigenpairsOfInterest.cpp   # main source: Lanczos, KPM, CFD, and sampling loop
-├── Makefile                          # build file
+├── Makefile        # build file
+├── Hamiltonian_9atom_3body.txt  #example Hamiltonian                   
 └── README.md
+
 ```
 
 ## Requirements
