@@ -74,6 +74,8 @@ Example using Hamiltonian given to test:
 
 The parameters used in the paper are listed in Table I. For similar sized Hamiltonians to ours, I'd start with our parameters and change as needed.
 
+If you have additional questions you can find me: nchlanda(AT)brynmawr.edu
+
 ## Output
 
 - **`spectrum.txt`**: the KPM density of states (energy, normalized $\rho$).
