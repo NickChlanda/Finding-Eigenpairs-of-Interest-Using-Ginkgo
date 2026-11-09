@@ -260,12 +260,6 @@ int mc_draw_attempts = 0;
       // monte carlo check
 if (random_num >= interpolated_rho)
   {
-    mc_draw_attempts++;
-    if (mc_draw_attempts >= 1000)
-      {
-        std::cout << "Failed the MC draw after 1000 attempts\n";
-        mc_draw_attempts = 0;
-      }
     continue;
   }
 
